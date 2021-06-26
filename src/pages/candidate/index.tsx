@@ -24,10 +24,15 @@ const Candidate: FC = () => {
         </div>
 
         <div className="body-form">
-          <Input type="text" id="cpf" name="cpf" />
-          <Input type="email" id="email" name="email" />
-          <Input type="password" id="password" name="password" />
-          <Input type="password" id="password1" name="password1" />
+          <Input type="text" id="cpf" name="cpf" label="CPF" />
+          <Input type="email" id="email" name="email" label="E-mail" />
+          <Input type="password" id="password" name="password" label="Senha" />
+          <Input
+            type="password"
+            id="password1"
+            name="password1"
+            label="Confirmar senha"
+          />
         </div>
       </form>
     </div>

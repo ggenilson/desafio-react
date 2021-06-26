@@ -3,7 +3,7 @@ import { inputProps } from './types';
 import Button from './button';
 import OtherInput from './others';
 
-const basics = ['text', 'number', 'email'];
+const basics = ['text', 'password', 'email'];
 const buttonsType = ['button', 'submit', 'reset'];
 
 const Input: FC<inputProps> = ({ type, className, label, ...restProps }) => {

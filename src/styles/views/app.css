@@ -11,3 +11,47 @@
   align-items: center;
   justify-content: center;
 }
+
+.container-form .left-img {
+  margin-right: 100px;
+}
+
+.container-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: 505px;
+  background-color: rgb(244, 240, 254);
+  padding-top: 40px;
+  border-radius: 50px;
+}
+
+form .header-form {
+  display: flex;
+  /* align-self: center; */
+  align-items: center;
+  width: 100%;
+}
+
+form .left-header-form {
+  width: 100%;
+  padding-left: 40px;
+}
+
+form .header-form .left-header-form h2 {
+  color: rgb(80, 36, 171);
+}
+
+form .header-form .left-header-form span {
+  color: rgb(225, 222, 233);
+  font-size: 13px;
+}
+
+form .right-header-form {
+  padding-right: 40px;
+}
+
+form .body-form {
+  padding: 0 40px;
+}

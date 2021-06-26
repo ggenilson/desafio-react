@@ -3,49 +3,23 @@
 }
 
 .inputWithIcon input[type='text'],
-select {
+.inputWithIcon input[type='email'],
+.inputWithIcon input[type='password'],
+.inputWithIcon select {
   width: 100%;
-  border: 1px solid #aaa;
+  border: 1px none;
   border-radius: 4px;
+  background-color: #fff;
   outline: none;
   padding: 10px;
   box-sizing: border-box;
   transition: 0.3s;
 }
 
-.inputWithIcon input[type='text'],
-select {
-  padding-left: 40px;
-}
-
-.inputWithIcon i {
-  position: absolute;
-  left: 0;
-  color: #aaa;
-  transition: 0.3s;
-}
-
-.inputWithIcon input[type='text']:focus + i {
-  color: var(--primary);
-}
-
-.inputWithIcon.inputIconBg i {
-  background-color: #fff;
-  color: var(--second);
-  padding: 15px 6px;
-  border-radius: 4px 0 0 4px;
-  border: 1px solid #aaa;
-}
-
-.inputWithIcon.inputIconBg input[type='text']:focus + i {
-  color: #fff;
-  /* background-color: var(--primary); */
-}
-
 .input-container label {
   font-size: 14px;
   position: absolute;
-  left: 2.4rem;
+  left: 0.2rem;
   top: 0.9rem;
   padding: 0 0.5rem;
   color: #aaa;
@@ -64,7 +38,6 @@ select {
 
 .input-container {
   position: relative;
-  /* width: 20rem; */
   height: 3rem;
   margin: 20px 0;
 }
@@ -81,18 +54,6 @@ select {
   outline: none;
   padding: 1.25rem;
   background: none;
-}
-
-.input-container select {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.input-container .option-disabled {
-  color: #aaa;
 }
 
 .input-button-container {
@@ -136,9 +97,4 @@ select {
 
 .input-button-container button:hover::before {
   height: 0;
-}
-
-/* Rich Text */
-.container-richText {
-  margin: 20px 0;
 }
