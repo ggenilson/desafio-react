@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import Input from '../../components/input';
 import Modal from '../../components/modal';
+import { validateEmail } from '../../utils';
 
 //Imagens
 import store from '../../assets/img/cadastro.png';
@@ -9,6 +10,7 @@ import info from '../../assets/img/informacao.png';
 
 const Candidate: FC = () => {
   const [toggle, setToggle] = useState(false);
+  const [email, setEmail] = useState('');
 
   function handleSaveCandidate() {
     setToggle(true);
@@ -67,8 +69,9 @@ const Candidate: FC = () => {
               id="email"
               name="email"
               label="E-mail"
+              onBlur={e => setEmail(e.target.value)}
               required
-              isValid
+              isValid={validateEmail(email)}
             />
             <Input
               type="password"

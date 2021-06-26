@@ -23,6 +23,7 @@ const Input: FC<inputProps> = ({
         <OtherInput
           {...restProps}
           type={type}
+          // onChange={e => onChange(e)}
           label={label}
           className={`${className} ${isValid ? 'good' : 'bad'}`}
         />

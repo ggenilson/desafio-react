@@ -1,10 +1,11 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { inputProps } from '../types';
 
 const OtherInput: FC<inputProps> = ({
   type,
   className,
   label,
+  onChange,
   ...restProps
 }) => {
   if (!restProps?.name) {
@@ -22,7 +23,6 @@ const OtherInput: FC<inputProps> = ({
         {...restProps}
         className={`form-input ${className && className}`}
         placeholder=" "
-        autoComplete="off"
       />
       <label htmlFor={`${restProps.id}`} className="form-label">
         {label}
