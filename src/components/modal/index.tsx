@@ -25,7 +25,7 @@ const Modal: FC<ModalProps> = ({
                 onSaveClick();
               }}
             >
-              Concluír
+              FECHAR
             </button>
           </div>
         </div>

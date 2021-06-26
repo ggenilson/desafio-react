@@ -6,6 +6,7 @@ export type inputProps = {
   value?: string;
   label?: string;
   placeholder?: string;
+  pattern?: string;
   style?: object;
   onChange?: (val: any) => void;
   onClick?: () => void;
