@@ -3,7 +3,8 @@ import Input from '../../components/input';
 import Modal from '../../components/modal';
 import { Formik, Form } from 'formik';
 import { IFormValues } from './interfaces';
-import { validateEmail } from '../../utils';
+import { validateEmail, validateCpf } from '../../utils';
+import { cpf } from 'cpf-cnpj-validator';
 
 //Imagens
 import store from '../../assets/img/cadastro.png';
@@ -20,6 +21,7 @@ const Candidate: FC = () => {
 
   const [toggle, setToggle] = useState(false);
   const [email, setEmail] = useState('');
+  const [cpf, setCpf] = useState('');
 
   function handleSaveCandidate() {
     setToggle(true);
@@ -74,7 +76,15 @@ const Candidate: FC = () => {
             </div>
 
             <div className="body-form">
-              <Input type="text" id="cpf" name="cpf" label="CPF" required />
+              <Input
+                type="text"
+                id="cpf"
+                name="cpf"
+                label="CPF"
+                required
+                onBlur={e => setCpf(e.target.value)}
+                isValid={validateCpf(cpf)}
+              />
               <Input
                 type="email"
                 id="email"
