@@ -91,3 +91,11 @@
   overflow: hidden;
   transition: 0.8s;
 }
+
+.input-container input.good ~ .fa-check {
+  color: rgb(174, 227, 201);
+  position: absolute;
+  right: 5px;
+  top: 17px;
+  padding-left: 10px;
+}

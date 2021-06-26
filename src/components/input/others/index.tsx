@@ -27,6 +27,7 @@ const OtherInput: FC<inputProps> = ({
       <label htmlFor={`${restProps.id}`} className="form-label">
         {label}
       </label>
+      <i className="fa fa-check" />
     </div>
   );
 
