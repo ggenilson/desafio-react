@@ -3,51 +3,25 @@
 }
 
 .inputWithIcon input[type='text'],
-select {
+.inputWithIcon input[type='email'],
+.inputWithIcon input[type='password'] {
   width: 100%;
-  border: 1px solid #aaa;
+  border: 1px none;
   border-radius: 4px;
+  background-color: #fff;
   outline: none;
-  padding: 10px;
+  padding-left: 20px;
+  padding-top: 29px;
   box-sizing: border-box;
   transition: 0.3s;
-}
-
-.inputWithIcon input[type='text'],
-select {
-  padding-left: 40px;
-}
-
-.inputWithIcon i {
-  position: absolute;
-  left: 0;
-  color: #aaa;
-  transition: 0.3s;
-}
-
-.inputWithIcon input[type='text']:focus + i {
-  color: var(--primary);
-}
-
-.inputWithIcon.inputIconBg i {
-  background-color: #fff;
-  color: var(--second);
-  padding: 15px 6px;
-  border-radius: 4px 0 0 4px;
-  border: 1px solid #aaa;
-}
-
-.inputWithIcon.inputIconBg input[type='text']:focus + i {
-  color: #fff;
-  /* background-color: var(--primary); */
 }
 
 .input-container label {
   font-size: 14px;
   position: absolute;
-  left: 2.4rem;
-  top: 0.9rem;
-  padding: 0 0.5rem;
+  left: 0.4rem;
+  top: 1rem;
+  padding: 0 0.2rem;
   color: #aaa;
   cursor: text;
   transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
@@ -56,15 +30,14 @@ select {
 
 .form-input:focus ~ .form-label,
 .form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
-  top: -0.5rem;
+  top: 0.5rem;
   font-size: 0.8rem;
-  left: 2.4rem;
+  left: 0.5rem;
   color: var(--second);
 }
 
 .input-container {
   position: relative;
-  /* width: 20rem; */
   height: 3rem;
   margin: 20px 0;
 }
@@ -83,17 +56,7 @@ select {
   background: none;
 }
 
-.input-container select {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.input-container .option-disabled {
-  color: #aaa;
-}
+/*  */
 
 .input-button-container {
   position: relative;
@@ -104,41 +67,16 @@ select {
 }
 
 .input-button-container button {
-  border: 1px solid var(--second);
+  width: 100%;
+  border: none;
   border-radius: 5px;
-  width: 50%;
+  width: 100%;
   height: 50px;
-  color: #fff;
-  background: none;
-  font-size: 20px;
+  color: rgb(184, 178, 188);
+  background: rgb(222, 216, 228);
+  font-size: 15px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: 0.8s;
-}
-
-.input-button-container button::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 180%;
-  bottom: 0;
-  border-radius: 50% 50% 0 0;
-  background-color: var(--second);
-  z-index: -1;
-  transition: 0.8s;
-}
-
-.input-button-container button:hover {
-  color: var(--second);
-}
-
-.input-button-container button:hover::before {
-  height: 0;
-}
-
-/* Rich Text */
-.container-richText {
-  margin: 20px 0;
 }
