@@ -1,9 +1,8 @@
 .modal-container {
-  width: calc(100% - 240px);
+  width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
-  left: 240px;
   top: 0;
   z-index: 2000;
   display: none;
@@ -20,8 +19,6 @@
   position: relative;
   display: flex;
   overflow-x: auto;
-  /* // align-items: center;
-  // justify-content: center; */
 }
 
 .modal-container .modal .content-modal {

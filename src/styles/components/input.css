@@ -6,7 +6,8 @@
 .inputWithIcon input[type='email'],
 .inputWithIcon input[type='password'] {
   width: 100%;
-  border: 1px none;
+  border: none;
+  border-bottom: 1px solid rgb(184, 178, 188);
   border-radius: 4px;
   background-color: #fff;
   outline: none;
