@@ -14,6 +14,13 @@ const Candidate: FC = () => {
     setToggle(true);
   }
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleSaveCandidate();
+
+    console.log('E: ', e);
+  };
+
   return (
     <>
       <Modal
@@ -40,7 +47,7 @@ const Candidate: FC = () => {
           <img src={store} alt="Cadastro" />
         </div>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="header-form">
             <div className="left-header-form">
               <h2>Cadastrar Candidato</h2>
@@ -52,35 +59,33 @@ const Candidate: FC = () => {
           </div>
 
           <div className="body-form">
+            <Input type="text" id="cpf" name="cpf" label="CPF" required />
             <Input
-              type="text"
-              id="cpf"
-              name="cpf"
-              label="CPF"
-              pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
+              type="email"
+              id="email"
+              name="email"
+              label="E-mail"
+              required
             />
-            <Input type="email" id="email" name="email" label="E-mail" />
             <Input
               type="password"
               id="password"
               name="password"
               label="Senha"
+              required
             />
             <Input
               type="password"
               id="password1"
               name="password1"
               label="Confirmar senha"
+              required
             />
 
-            <Input
-              type="button"
-              value="CADASTRAR"
-              onClick={() => handleSaveCandidate()}
-            />
+            <Input type="button" value="CADASTRAR" />
 
             <Input
-              type="button"
+              type="submit"
               value="JÁ POSSUI CADASTRO? FAÇA O LOGIN AQUI"
               className="login-button"
             />
