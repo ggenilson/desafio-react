@@ -34,8 +34,17 @@ const Candidate: FC = () => {
             label="Confirmar senha"
           />
 
-          <Input type="button" value="CADASTRAR" />
-          <Input type="button" value="JÁ POSSUI CADASTRO? FAÇA O LOGIN AQUI" />
+          <Input
+            type="button"
+            value="CADASTRAR"
+            onClick={() => alert('Até aqui tudo bem!')}
+          />
+          <Input
+            type="button"
+            value="JÁ POSSUI CADASTRO? FAÇA O LOGIN AQUI"
+            onClick={() => alert('Wow!')}
+            className="login-button"
+          />
         </div>
       </form>
     </div>

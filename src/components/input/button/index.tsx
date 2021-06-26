@@ -1,11 +1,16 @@
 import { FC } from 'react';
 import { inputProps } from '../types';
 
-const Button: FC<inputProps> = ({ type, ...restProps }) => {
+const Button: FC<inputProps> = ({
+  type,
+  className = '',
+  value = '',
+  ...restProps
+}) => {
   const Input = () => (
-    <div className="input-button-container">
+    <div className={`${className} input-button-container`}>
       <button type={type} {...restProps}>
-        {restProps?.value}
+        {value}
       </button>
     </div>
   );

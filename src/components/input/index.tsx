@@ -21,7 +21,7 @@ const Input: FC<inputProps> = ({ type, className, label, ...restProps }) => {
           className={className}
         />
       ) : buttonsType.indexOf(type) > -1 ? (
-        <Button type={type} {...restProps} />
+        <Button type={type} {...restProps} className={className} />
       ) : (
         <></>
       )}
