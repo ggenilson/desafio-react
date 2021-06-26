@@ -33,6 +33,9 @@ const Candidate: FC = () => {
             name="password1"
             label="Confirmar senha"
           />
+
+          <Input type="button" value="CADASTRAR" />
+          <Input type="button" value="JÁ POSSUI CADASTRO? FAÇA O LOGIN AQUI" />
         </div>
       </form>
     </div>

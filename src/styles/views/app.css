@@ -5,6 +5,12 @@
   flex-direction: column;
 }
 
+.turn-back {
+  padding: 40px;
+  color: rgb(140, 95, 190);
+  cursor: pointer;
+}
+
 .container-form {
   height: 100vh;
   display: flex;
@@ -21,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   width: 500px;
-  height: 505px;
+  height: 570px;
   background-color: rgb(244, 240, 254);
   padding-top: 40px;
   border-radius: 50px;
@@ -29,7 +35,6 @@
 
 form .header-form {
   display: flex;
-  /* align-self: center; */
   align-items: center;
   width: 100%;
 }
