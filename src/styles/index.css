@@ -1,4 +1,5 @@
 @import url('./components/main.css');
+@import url('./views/app.css');
 
 * {
   padding: 0;
