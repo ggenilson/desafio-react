@@ -15,14 +15,16 @@
   min-width: 40%;
   height: auto;
   padding: 40px;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
   display: flex;
+  flex-direction: column;
   overflow-x: auto;
 }
 
 .modal-container .modal .content-modal {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

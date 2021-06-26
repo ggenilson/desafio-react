@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { ModalProps } from './types';
+import Input from '../../components/input';
 
 const Modal: FC<ModalProps> = ({
   Component,
@@ -12,21 +13,18 @@ const Modal: FC<ModalProps> = ({
     {toggle && (
       <div id="modalContainer" className="modal-container show">
         <div className={`modal ${className || ''}`}>
-          <button className="close-modal" onClick={() => setToggle(false)}>
-            x
-          </button>
           {Component && <div className="content-modal">{Component}</div>}
 
           <div className="modal-footer">
-            <button
-              className="modal-save"
+            <Input
+              type="button"
+              value="FECHAR"
+              className="close-modal-button"
               onClick={() => {
                 setToggle(false);
                 onSaveClick();
               }}
-            >
-              FECHAR
-            </button>
+            />
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@
   height: 570px;
   background-color: rgb(244, 240, 254);
   padding-top: 40px;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
 form .header-form {
@@ -65,4 +65,19 @@ form .body-form {
   background-color: transparent;
   color: rgb(91, 88, 157);
   border: 1px solid rgb(91, 88, 157);
+}
+
+.modal-save-candidate {
+  width: 650px;
+  min-height: 298px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-modal-button button {
+  width: 452px;
+  height: 38px;
+  background-color: rgb(16, 113, 230);
+  color: #fff;
 }

@@ -5,25 +5,34 @@ import Modal from '../../components/modal';
 //Imagens
 import store from '../../assets/img/cadastro.png';
 import gria from '../../assets/img/gria.png';
+import info from '../../assets/img/informacao.png';
 
 const Candidate: FC = () => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
+
+  function handleSaveCandidate() {
+    setToggle(true);
+  }
 
   return (
     <>
       <Modal
         Component={
-          <div className="delete-container">
-            <div className="delete-container-sms">
-              <span>Tem a certeza que deseja eliminar estes dados?</span>
+          <>
+            <img src={info} alt="Informação" />
+            <h2>Cadastro Realizado com Sucesso!</h2>
+
+            <div>
+              <span>
+                O link de confirmação foi enviado para o email
+                *******ail@email.com
+              </span>
             </div>
-          </div>
+          </>
         }
         toggle={toggle}
         setToggle={setToggle}
-        onSaveClick={async () => {
-          alert('Salvo');
-        }}
+        className="modal-save-candidate"
       />
 
       <div className="container-form">
@@ -43,7 +52,13 @@ const Candidate: FC = () => {
           </div>
 
           <div className="body-form">
-            <Input type="text" id="cpf" name="cpf" label="CPF" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" />
+            <Input
+              type="text"
+              id="cpf"
+              name="cpf"
+              label="CPF"
+              pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
+            />
             <Input type="email" id="email" name="email" label="E-mail" />
             <Input
               type="password"
@@ -61,12 +76,12 @@ const Candidate: FC = () => {
             <Input
               type="button"
               value="CADASTRAR"
-              onClick={() => alert('Até aqui tudo bem!')}
+              onClick={() => handleSaveCandidate()}
             />
+
             <Input
               type="button"
               value="JÁ POSSUI CADASTRO? FAÇA O LOGIN AQUI"
-              onClick={() => alert('Wow!')}
               className="login-button"
             />
           </div>
