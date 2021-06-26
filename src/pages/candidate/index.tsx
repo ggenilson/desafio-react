@@ -47,6 +47,7 @@ const Candidate: FC = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="turn-back hidden">
+            <i className="fa fa-arrow-left" />
             <span>Retornar</span>
           </div>
           <div className="header-form">

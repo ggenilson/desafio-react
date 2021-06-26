@@ -57,13 +57,13 @@
   background: none;
 }
 
-.input-container input.good::after {
+.input-container .form-input.good::after {
   content: '';
-  /* position: absolute;
+  position: absolute;
   background-color: red;
   right: 0;
-  top: 0; */
-  width: 100opx;
+  top: 0;
+  width: 100px;
   height: 200px;
 }
 

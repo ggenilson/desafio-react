@@ -9,6 +9,12 @@
   padding: 40px;
   color: rgb(140, 95, 190);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.turn-back i {
+  margin-right: 10px;
 }
 
 .container-form {

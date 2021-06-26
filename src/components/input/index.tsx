@@ -8,7 +8,7 @@ const buttonsType = ['button', 'submit', 'reset'];
 
 const Input: FC<inputProps> = ({
   type,
-  className,
+  className = '',
   isValid = '',
   label,
   ...restProps
