@@ -1,0 +1,8 @@
+@import url('./components/main.css');
+@import url('./views/app.css');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

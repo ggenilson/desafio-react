@@ -1,0 +1,144 @@
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon input[type='text'],
+select {
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.inputWithIcon input[type='text'],
+select {
+  padding-left: 40px;
+}
+
+.inputWithIcon i {
+  position: absolute;
+  left: 0;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.inputWithIcon input[type='text']:focus + i {
+  color: var(--primary);
+}
+
+.inputWithIcon.inputIconBg i {
+  background-color: #fff;
+  color: var(--second);
+  padding: 15px 6px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #aaa;
+}
+
+.inputWithIcon.inputIconBg input[type='text']:focus + i {
+  color: #fff;
+  /* background-color: var(--primary); */
+}
+
+.input-container label {
+  font-size: 14px;
+  position: absolute;
+  left: 2.4rem;
+  top: 0.9rem;
+  padding: 0 0.5rem;
+  color: #aaa;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background-color: #fff;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 2.4rem;
+  color: var(--second);
+}
+
+.input-container {
+  position: relative;
+  /* width: 20rem; */
+  height: 3rem;
+  margin: 20px 0;
+}
+
+.input-container input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  color: #000;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+
+.input-container select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.input-container .option-disabled {
+  color: #aaa;
+}
+
+.input-button-container {
+  position: relative;
+  height: 3rem;
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-button-container button {
+  border: 1px solid var(--second);
+  border-radius: 5px;
+  width: 50%;
+  height: 50px;
+  color: #fff;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.8s;
+}
+
+.input-button-container button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 180%;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+  background-color: var(--second);
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.input-button-container button:hover {
+  color: var(--second);
+}
+
+.input-button-container button:hover::before {
+  height: 0;
+}
+
+/* Rich Text */
+.container-richText {
+  margin: 20px 0;
+}

@@ -1,0 +1,88 @@
+.modal-container {
+  width: calc(100% - 240px);
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 240px;
+  top: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container .modal {
+  background: #fff;
+  min-width: 40%;
+  height: auto;
+  padding: 40px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  /* // align-items: center;
+  // justify-content: center; */
+}
+
+.modal-container .modal .content-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container .modal .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--second);
+  border: 4px solid #fff;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.modal-container .modal .modal-save {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 0.7rem;
+  border: 4px solid #fff;
+  background-color: var(--second);
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.modal-container .modal .close-modal:focus {
+  outline: none;
+}
+
+.modal-container .modal .close-modal:hover,
+.modal-container .modal .modal-save:hover {
+  background-color: green;
+}
+
+.show {
+  display: flex;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.show > div.modal {
+  animation: modal 1s ease;
+}
