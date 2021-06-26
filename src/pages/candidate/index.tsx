@@ -17,8 +17,6 @@ const Candidate: FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     handleSaveCandidate();
-
-    console.log('E: ', e);
   };
 
   return (
@@ -29,7 +27,7 @@ const Candidate: FC = () => {
             <img src={info} alt="Informação" />
             <h2>Cadastro Realizado com Sucesso!</h2>
 
-            <div>
+            <div className="confirm-link">
               <span>
                 O link de confirmação foi enviado para o email
                 *******ail@email.com
@@ -82,7 +80,7 @@ const Candidate: FC = () => {
               required
             />
 
-            <Input type="button" value="CADASTRAR" />
+            <Input type="submit" value="CADASTRAR" />
 
             <Input
               type="submit"

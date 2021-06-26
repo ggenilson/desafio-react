@@ -75,6 +75,16 @@ form .body-form {
   justify-content: center;
 }
 
+.modal-save-candidate img,
+h2 {
+  margin-bottom: 20px;
+}
+
+.modal-save-candidate .confirm-link {
+  width: 280px;
+  text-align: center;
+}
+
 .close-modal-button button {
   width: 452px;
   height: 38px;
