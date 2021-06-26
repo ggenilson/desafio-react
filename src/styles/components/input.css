@@ -53,8 +53,18 @@
   font-size: inherit;
   color: #000;
   outline: none;
-  padding: 1.25rem;
+  padding: 1rem;
   background: none;
+}
+
+.input-container input.good::after {
+  content: '';
+  /* position: absolute;
+  background-color: red;
+  right: 0;
+  top: 0; */
+  width: 100opx;
+  height: 200px;
 }
 
 /*  */

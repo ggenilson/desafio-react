@@ -6,7 +6,13 @@ import OtherInput from './others';
 const basics = ['text', 'password', 'email'];
 const buttonsType = ['button', 'submit', 'reset'];
 
-const Input: FC<inputProps> = ({ type, className, label, ...restProps }) => {
+const Input: FC<inputProps> = ({
+  type,
+  className,
+  isValid = '',
+  label,
+  ...restProps
+}) => {
   if (!type) {
     return <label>Esperava receber um "type"!</label>;
   }
@@ -15,13 +21,13 @@ const Input: FC<inputProps> = ({ type, className, label, ...restProps }) => {
     <>
       {basics.indexOf(type) > -1 ? (
         <OtherInput
+          {...restProps}
           type={type}
           label={label}
-          {...restProps}
-          className={className}
+          className={`${className} ${isValid ? 'good' : 'bad'}`}
         />
       ) : buttonsType.indexOf(type) > -1 ? (
-        <Button type={type} {...restProps} className={className} />
+        <Button {...restProps} type={type} className={className} />
       ) : (
         <></>
       )}

@@ -67,6 +67,7 @@ const Candidate: FC = () => {
               name="email"
               label="E-mail"
               required
+              isValid
             />
             <Input
               type="password"

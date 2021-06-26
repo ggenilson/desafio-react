@@ -8,6 +8,7 @@ export type inputProps = {
   placeholder?: string;
   pattern?: string;
   required?: boolean;
+  isValid?: boolean;
   style?: object;
   onChange?: (val: any) => void;
   onClick?: () => void;
