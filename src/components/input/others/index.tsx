@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { inputProps } from '../types';
+import { Field } from 'formik';
 
 const OtherInput: FC<inputProps> = ({
   type,
@@ -18,7 +19,7 @@ const OtherInput: FC<inputProps> = ({
 
   const Input = () => (
     <div className="input-container inputWithIcon inputIconBg">
-      <input
+      <Field
         type={type}
         {...restProps}
         className={`form-input ${className && className}`}
