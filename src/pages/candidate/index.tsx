@@ -46,6 +46,9 @@ const Candidate: FC = () => {
         </div>
 
         <form onSubmit={handleSubmit}>
+          <div className="turn-back hidden">
+            <span>Retornar</span>
+          </div>
           <div className="header-form">
             <div className="left-header-form">
               <h2>Cadastrar Candidato</h2>
@@ -80,7 +83,7 @@ const Candidate: FC = () => {
               required
             />
 
-            <Input type="submit" value="CADASTRAR" />
+            <Input type="submit" value="CADASTRAR" className="btn-store" />
 
             <Input
               type="submit"

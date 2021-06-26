@@ -91,3 +91,62 @@ h2 {
   background-color: rgb(16, 113, 230);
   color: #fff;
 }
+
+.turn-back.hidden {
+  display: none;
+}
+
+/* Responsividade */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-form .left-img {
+    display: none;
+  }
+
+  .btn-store button {
+    background-color: rgb(16, 113, 230);
+    color: #fff;
+  }
+
+  .modal-save-candidate {
+    width: 550px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-form .left-img {
+    display: none;
+  }
+
+  .container-form form {
+    border-radius: 0;
+    height: 95%;
+  }
+
+  .container-form form > * {
+    margin-top: -20px;
+  }
+
+  .turn-back {
+    display: none;
+  }
+
+  .turn-back.hidden {
+    display: flex;
+  }
+
+  .btn-store button {
+    background-color: rgb(16, 113, 230);
+    color: #fff;
+  }
+
+  .login-button button {
+    background-color: transparent;
+    border: none;
+    color: rgb(16, 113, 230);
+  }
+
+  .modal-save-candidate {
+    width: 550px;
+  }
+}
