@@ -12,14 +12,10 @@ import info from '../../assets/img/informacao.png';
 
 const Candidate: FC = () => {
   const initialValues: IFormValues = {
-    application: '',
-    abbreviation: '',
-    ipAddress: '',
-    applicationUrl: '',
-    version: '',
-    Scope: '',
-    objective: '',
-    status: 'enabled',
+    cpf: '',
+    email: '',
+    password: '',
+    password1: '',
   };
 
   const [toggle, setToggle] = useState(false);
@@ -58,6 +54,7 @@ const Candidate: FC = () => {
           initialValues={initialValues}
           onSubmit={async (values, actions) => {
             actions.setSubmitting(false);
+            console.log('Values: ', values);
             handleSaveCandidate();
           }}
         >
@@ -83,6 +80,7 @@ const Candidate: FC = () => {
                 id="email"
                 name="email"
                 label="E-mail"
+                onBlur={e => setEmail(e.target.value)}
                 required
                 isValid={validateEmail(email)}
               />
