@@ -34,9 +34,9 @@
   justify-content: center;
   width: 500px;
   height: 570px;
-  background-color: rgb(244, 240, 254);
+  background-color: #f5f0fd;
   padding-top: 40px;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 form .header-form {
@@ -51,7 +51,7 @@ form .left-header-form {
 }
 
 form .header-form .left-header-form h2 {
-  color: rgb(80, 36, 171);
+  color: #5914df;
 }
 
 form .header-form .left-header-form span {
@@ -94,7 +94,7 @@ h2 {
 .close-modal-button button {
   width: 452px;
   height: 38px;
-  background-color: rgb(16, 113, 230);
+  background-color: #1071e6;
   color: #fff;
 }
 
@@ -110,7 +110,7 @@ h2 {
   }
 
   .btn-store button {
-    background-color: rgb(16, 113, 230);
+    background-color: #1071e6;
     color: #fff;
   }
 
@@ -142,14 +142,14 @@ h2 {
   }
 
   .btn-store button {
-    background-color: rgb(16, 113, 230);
+    background-color: #1071e6;
     color: #fff;
   }
 
   .login-button button {
     background-color: transparent;
     border: none;
-    color: rgb(16, 113, 230);
+    color: #1071e6;
   }
 
   .modal-save-candidate {

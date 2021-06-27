@@ -3,8 +3,12 @@ import Input from '../../components/input';
 import Modal from '../../components/modal';
 import { Formik, Form } from 'formik';
 import { IFormValues } from './interfaces';
-import { validateEmail, validateCpf } from '../../utils';
-import { cpf } from 'cpf-cnpj-validator';
+import {
+  validateEmail,
+  validateCpf,
+  getSmsEmail,
+  formatCpf,
+} from '../../utils';
 
 //Imagens
 import store from '../../assets/img/cadastro.png';
@@ -22,6 +26,7 @@ const Candidate: FC = () => {
   const [toggle, setToggle] = useState(false);
   const [email, setEmail] = useState('');
   const [cpf, setCpf] = useState('');
+  const [smsEmail, setSmsEmail] = useState('');
 
   function handleSaveCandidate() {
     setToggle(true);
@@ -36,10 +41,7 @@ const Candidate: FC = () => {
             <h2>Cadastro Realizado com Sucesso!</h2>
 
             <div className="confirm-link">
-              <span>
-                O link de confirmação foi enviado para o email
-                *******ail@email.com
-              </span>
+              <span>{smsEmail}</span>
             </div>
           </>
         }
@@ -56,7 +58,10 @@ const Candidate: FC = () => {
           initialValues={initialValues}
           onSubmit={async (values, actions) => {
             actions.setSubmitting(false);
-            console.log('Values: ', values);
+
+            values.cpf = formatCpf(values.cpf);
+            setSmsEmail(getSmsEmail(values.email));
+
             handleSaveCandidate();
           }}
         >

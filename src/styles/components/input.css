@@ -93,7 +93,7 @@
 }
 
 .input-container input.good ~ .fa-check {
-  color: rgb(174, 227, 201);
+  color: #27ae60;
   position: absolute;
   right: 5px;
   top: 17px;

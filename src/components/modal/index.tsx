@@ -6,13 +6,13 @@ const Modal: FC<ModalProps> = ({
   Component,
   toggle,
   setToggle,
-  className,
+  className = '',
   onSaveClick = () => {},
 }) => (
   <>
     {toggle && (
       <div id="modalContainer" className="modal-container show">
-        <div className={`modal ${className || ''}`}>
+        <div className={`modal ${className}`}>
           {Component && <div className="content-modal">{Component}</div>}
 
           <div className="modal-footer">
